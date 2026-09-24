@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { LanguageContext, Language, AR } from "./context/LanguageContext";
 import Login from "./auth/Login";
 import Signup from "./auth/Signup";
@@ -556,9 +556,11 @@ function Hero() {
             routing, and live anomaly detection at any scale.
           </p>
           <div className="flex flex-wrap gap-4">
+            <Link to={'/login'}>
             <button className="font-display font-bold tracking-widest text-sm uppercase px-7 py-3.5 bg-neon text-ground hover:bg-neon-dim transition-colors">
               Start Free Trial
             </button>
+            </Link>
             <button className="font-display font-semibold tracking-widest text-sm uppercase px-7 py-3.5 border border-edge text-text hover:border-neon hover:text-neon transition-colors">
               Try the Demo ↓
             </button>
@@ -2130,12 +2132,14 @@ function CTASection() {
           </span>
         </h2>
         <div className="flex flex-wrap justify-center gap-4 pt-4">
-          <button
-            className="font-display font-bold tracking-widest text-base uppercase px-10 py-4 bg-neon text-ground hover:bg-neon-dim transition-colors"
-            style={{ boxShadow: "0 0 40px #00ff6e30" }}
-          >
-            Start Free Trial
-          </button>
+          <Link to={"/login"}>
+            <button
+              className="font-display font-bold tracking-widest text-base uppercase px-10 py-4 bg-neon text-ground hover:bg-neon-dim transition-colors"
+              style={{ boxShadow: "0 0 40px #00ff6e30" }}
+            >
+              Start Free Trial
+            </button>
+          </Link>
           <button className="font-display font-semibold tracking-widest text-base uppercase px-10 py-4 border border-edge text-text hover:border-neon hover:text-neon transition-colors">
             Book a Demo
           </button>
