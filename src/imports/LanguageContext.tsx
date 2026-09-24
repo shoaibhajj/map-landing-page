@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect, type ReactNode } from 'react'
-import { strings, type Lang, type LandingKey } from '../i18n/landing'
+import { strings, type Lang, type LandingKey } from '../imports/landing'
 
 interface LanguageCtx {
   lang: Lang
